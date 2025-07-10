@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jeffry Steve AR Business Card</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+    <style>
+      body, html { margin: 0; overflow: hidden; }
+      #prompt { position: absolute; top: 10px; width: 100%; text-align: center; font-family: sans-serif; color: white; z-index: 1; }
+    </style>
+  </head>
+  <body>
+    <div id="prompt">Point your camera at your business card to view AR</div>
+    <a-scene embedded arjs>
+      <a-marker type="pattern" url="pattern-business_card_marker_resized.patt">
+        <a-image src="https://cdn.jsdelivr.net/gh/openai/brand-assets@main/chatgpt/ChatGPT-icon-green.png" position="0 0.5 0" rotation="-90 0 0" width="1" height="1"></a-image>
+        <a-text value="Hi, I am Jeffry Steve, connect with me" position="0 1 0" rotation="-90 0 0" align="center" color="#00FF00" width="3"></a-text>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
